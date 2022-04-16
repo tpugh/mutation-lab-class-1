@@ -58,7 +58,7 @@ jobs:
         
       - name: show tmp files
         run: |
-          cd /__w/mull-lab/mull-lab/reports
+          cd /__w/mutation-lab/mutation-lab/reports
           ls
           
       - name: Mutation Annotation Report
