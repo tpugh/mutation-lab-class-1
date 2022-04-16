@@ -49,7 +49,7 @@ jobs:
       - name: Run Mull Show mutations
         run: |
           cd programs/v2/
-          mull-runner-12 -ide-reporter-show-killed --reporters=IDE sed_gl_1 --report-dir=/__w/mutation-lab/mutation-labb/reports --report-name=group_0
+          mull-runner-12 -ide-reporter-show-killed --reporters=IDE sed_gl_1 --report-dir=/__w/mutation-lab/mutation-lab/reports --report-name=group_0
           
       - name: Run Mull Generate JSON
         run: |
