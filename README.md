@@ -2,7 +2,7 @@
 Goals:
 Introduce Mutation testing terms and concepts.
 Provide students with exposure to GitHub and common testing automation tools.
-Provide insight into how Teams are currently using mutation testing for production software today.
+Provide insight on how teams are currently using mutation testing for production software today.
 
 
 
