@@ -1,5 +1,5 @@
 name: Group 3
-
+# Name 1, Name 2 Name 3, ....
 env:
   DISTR_REPO: "ubuntu/focal"
 
@@ -20,7 +20,7 @@ jobs:
           curl -1sLf 'https://dl.cloudsmith.io/public/mull-project/mull-stable/setup.deb.sh' | bash
           apt-get install -y clang-12 libclang-12-dev mull-12=0.15.0
       - name: work around permission issue
-        run: git config --global --add safe.directory /__w/mutation-lab/mutation-lab
+        run: git config --global --add safe.directory /__w/mutation-lab-class-1/mutation-lab-class-1
       - uses: actions/checkout@v2
         with:
           submodules: true
@@ -49,16 +49,16 @@ jobs:
       - name: Run Mull Show mutations
         run: |
           cd programs/vim
-          mull-runner-12 -ide-reporter-show-killed --reporters=IDE ccfilter_output --report-dir=/__w/mutation-lab/mutation-lab/reports --report-name=group_3
+          mull-runner-12 -ide-reporter-show-killed --reporters=IDE ccfilter_output --report-dir=/__w/mutation-lab-class-1/mutation-lab-class-1/reports --report-name=group_3
           
       - name: Run Mull Generate JSON
         run: |
           cd programs/vim
-          mull-runner-12 -ide-reporter-show-killed --reporters=Elements ccfilter_output --report-dir=/__w/mutation-lab/mutation-lab/reports --report-name=group_3
+          mull-runner-12 -ide-reporter-show-killed --reporters=Elements ccfilter_output --report-dir=/__w/mutation-lab-class-1/mutation-lab-class-1/reports --report-name=group_3
         
       - name: show tmp files
         run: |
-          cd /__w/mutation-lab/mutation-lab/reports
+          cd /__w/mutation-lab-class-1/mutation-lab-class-1/reports
           ls
           
       - name: Mutation Annotation Report
